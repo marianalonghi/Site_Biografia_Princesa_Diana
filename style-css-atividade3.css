@@ -1,0 +1,533 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff8fb;
+    color: #000;
+    line-height: 1.7;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background-color: #ca9bac;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 44px;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #e42fbd;
+}
+
+
+/* SEÇÃO INÍCIO */
+
+.inicio {
+    min-height: 580px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 60px 90px;
+
+    background-image:
+linear-gradient(
+    to bottom,
+    transparent 82%,
+    rgba(201, 157, 174, 0.6) 94%,
+    rgb(201, 157, 174) 100%
+),
+        
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("diana.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* TEXTO DA APRESENTAÇÃO */
+
+.texto-apresentacao {
+    width: 45%;
+    max-width: 550px;
+
+    color: white;
+}
+
+.texto-apresentacao h1 {
+    font-size: 55px;
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+
+    color: white;
+}
+
+.texto-apresentacao h2 {
+    font-size: 27px;
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+.texto-apresentacao p {
+    font-size: 17px;
+
+    color: white;
+}
+
+
+/* BIOGRAFIA */
+
+.biografia {
+    background-color: #ca9bac;
+    color: white;
+
+    padding: 70px 80px;
+
+    text-align: center;
+}
+
+
+/* TÍTULO DA BIOGRAFIA */
+
+.biografia h2 {
+    font-size: 40px;
+
+    margin-bottom: 30px;
+}
+
+
+/* TEXTO PRINCIPAL DA BIOGRAFIA */
+
+.texto-biografia {
+    width: 80%;
+    max-width: 1000px;
+
+    margin: 0 auto 55px auto;
+}
+
+.texto-biografia p {
+    font-size: 17px;
+    line-height: 1.9;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+
+/* DESTAQUES DA BIOGRAFIA */
+
+.destaques-biografia {
+    width: 85%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 70px;
+}
+
+.destaque {
+    width: 30%;
+
+    text-align: center;
+}
+
+.destaque h3 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+
+    color: #e42fbd;
+}
+
+.destaque p {
+    font-size: 16px;
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+/* LINHA DO TEMPO */
+
+.linhadotempo {
+    background-color: #fff8fb;
+
+    text-align: center;
+
+    padding: 80px 0 100px 0;
+}
+
+.linhadotempo h2 {
+    font-size: 40px;
+    color: #e42fbd;
+
+    margin-bottom: 35px;
+}
+
+
+/* CONTAINER DA LINHA DO TEMPO */
+
+.timeline {
+    width: 88%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    position: relative;
+}
+
+
+/* LINHA HORIZONTAL */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 10px;
+    left: 6%;
+    right: 6%;
+
+    height: 3px;
+
+    background-color: #e42fbd;
+}
+
+
+/* CADA EVENTO */
+
+.evento {
+    width: 13%;
+
+    position: relative;
+
+    text-align: center;
+}
+
+
+/* BOLINHAS */
+
+.bolinha {
+    width: 20px;
+    height: 20px;
+
+    background-color: #e42fbd;
+
+    border-radius: 50%;
+
+    margin: 0 auto 10px auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ANO */
+
+.evento h3 {
+    font-size: 24px;
+
+    color: #e42fbd;
+
+    margin-bottom: 2px;
+}
+
+
+/* TÍTULO DO EVENTO */
+
+.evento h4 {
+    font-size: 16px;
+
+    color: #e42fbd;
+
+    margin-bottom: 10px;
+}
+
+
+/* TEXTO DOS EVENTOS */
+
+.evento p {
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #000;
+
+    text-align: center;
+}
+
+/* GALERIA DE FOTOS */
+
+.galeria {
+    width: 100%;
+
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.galeria img {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.foto2 {
+    object-position: top;
+}
+
+.foto3 {
+    object-position: top;
+}
+
+.foto4 {
+    object-position: top;
+}
+
+/* PRINCIPAIS FEITOS */
+
+.feitos {
+    background-color: #ca9bac;
+
+    padding: 70px 80px;
+
+    color: white;
+}
+
+.feitos h2 {
+    font-size: 40px;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+
+/* LISTA DOS FEITOS */
+
+.feitos-lista {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+
+/* CADA BLOCO */
+
+.feito-bloco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    border: 3px solid #e42fbd;
+    border-radius: 22px;
+
+    padding: 8px;
+
+    overflow: hidden;
+}
+
+
+/* BLOCO INVERTIDO */
+
+.feito-bloco.inverso {
+    flex-direction: row-reverse;
+}
+
+
+/* TEXTO */
+
+.feito-texto {
+    width: 50%;
+
+    padding: 20px;
+}
+
+.feito-texto h3 {
+    font-size: 28px;
+
+    color: #e42fbd;
+
+    margin-bottom: 15px;
+}
+
+.feito-texto p {
+    font-size: 17px;
+    line-height: 1.9;
+
+    color: white;
+}
+
+
+/* IMAGEM */
+
+.feito-imagem {
+    width: 50%;
+}
+
+.feito-imagem img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 16px;
+}
+
+/* FALECIMENTO */
+
+.falecimento {
+    background-color: #fff8fb;
+
+    padding: 80px 80px 90px 80px;
+
+    text-align: center;
+}
+
+.falecimento h2 {
+    font-size: 40px;
+
+    color: #e42fbd;
+
+    margin-bottom: 15px;
+}
+
+.falecimento h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    background-color: #e42fbd;
+
+    margin: 12px auto 35px auto;
+
+    border-radius: 5px;
+}
+
+.conteudo-falecimento {
+    width: 80%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+.conteudo-falecimento p {
+    font-size: 17px;
+    line-height: 1.9;
+
+    color: #000;
+
+    text-align: center;
+
+    margin-bottom: 18px;
+}
+
+.conteudo-falecimento .frase-final {
+    margin-top: 40px;
+
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 500;
+
+    color: #e42fbd;
+}
+
+.fotos-falecimento {
+    width: 85%;
+    max-width: 1000px;
+
+    margin: 45px auto 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.foto-falecimento {
+    width: 50%;
+    height: 380px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 20px;
+
+    display: block;
+}
+
+.foto-falecimento-2 {
+    object-position: 20% center;
+}
