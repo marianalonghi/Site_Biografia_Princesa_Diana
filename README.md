@@ -25,6 +25,6 @@ A página está organizada nas seguintes seções:
 Desenvolver uma página biográfica sobre a Princesa Diana, apresentando de forma organizada e visualmente atrativa informações sobre sua vida, trajetória, principais feitos e legado, utilizando HTML e CSS.
 
 
-O portfólio está disponível através do GitHub Pages:
+A página está disponível através do GitHub Pages:
 
-[Acessar Portfólio]https://marianalonghi.github.io/Site_Biografia_Princesa_Diana/
+[Acessar Página](https://marianalonghi.github.io/Site_Biografia_Princesa_Diana/)
