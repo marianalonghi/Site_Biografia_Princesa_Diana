@@ -15,13 +15,21 @@ body {
     background-color: #fff8fb;
     color: #000;
     line-height: 1.7;
+
+    
 }
 
 
 /* CABEÇALHO */
 
 header {
-    background-color: #ca9bac;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: #c187cc;
 
     display: flex;
     justify-content: space-between;
@@ -33,7 +41,11 @@ header {
 header h1 {
     font-size: 22px;
     font-weight: 700;
+}
+
+header h1 a {
     color: white;
+    text-decoration: none;
 }
 
 nav {
@@ -51,14 +63,13 @@ nav a {
 }
 
 nav a:hover {
-    color: #e42fbd;
+    color: #932fe4;
 }
 
-
-/* SEÇÃO INÍCIO */
+/* INÍCIO */
 
 .inicio {
-    min-height: 580px;
+    min-height: 660px;
 
     display: flex;
     justify-content: flex-end;
@@ -67,13 +78,17 @@ nav a:hover {
     padding: 60px 90px;
 
     background-image:
-linear-gradient(
-    to bottom,
-    transparent 82%,
-    rgba(201, 157, 174, 0.6) 94%,
-    rgb(201, 157, 174) 100%
-),
-        
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(204, 165, 212, 0.08) 68%,
+            rgba(204, 165, 212, 0.18) 76%,
+            rgba(204, 165, 212, 0.30) 84%,
+            rgba(204, 165, 212, 0.45) 90%,
+            rgba(204, 165, 212, 0.65) 95%,
+            rgba(204, 165, 212, 0.85) 98%,
+            rgb(204, 165, 212) 100%
+        ),
         linear-gradient(
             to right,
             rgba(0, 0, 0, 0.05),
@@ -84,7 +99,12 @@ linear-gradient(
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    margin-top: 50px;
+     
 }
+
+
 /* TEXTO DA APRESENTAÇÃO */
 
 .texto-apresentacao {
@@ -122,7 +142,15 @@ linear-gradient(
 /* BIOGRAFIA */
 
 .biografia {
-    background-color: #ca9bac;
+    background: linear-gradient(
+        to bottom,
+        #cca5d4 0%,
+        #cca5d4 88%,
+        #dcc0e2 94%,
+        #eee0f1 97%,
+        #fff8fb 100%
+    );
+
     color: white;
 
     padding: 70px 80px;
@@ -185,7 +213,7 @@ linear-gradient(
 
     margin-bottom: 10px;
 
-    color: #e42fbd;
+    color: #765094;
 }
 
 .destaque p {
@@ -195,10 +223,17 @@ linear-gradient(
     text-align: center;
 }
 
+
 /* LINHA DO TEMPO */
 
 .linhadotempo {
-    background-color: #fff8fb;
+    background: linear-gradient(
+        to bottom,
+        #fff8fb 0%,
+        #fff8fb 92%,
+        #f8f0f8 96%,
+        #f1e2f3 100%
+    );
 
     text-align: center;
 
@@ -207,7 +242,7 @@ linear-gradient(
 
 .linhadotempo h2 {
     font-size: 40px;
-    color: #e42fbd;
+    color: #765094;
 
     margin-bottom: 35px;
 }
@@ -242,7 +277,7 @@ linear-gradient(
 
     height: 3px;
 
-    background-color: #e42fbd;
+    background-color: #765094;
 }
 
 
@@ -263,7 +298,7 @@ linear-gradient(
     width: 20px;
     height: 20px;
 
-    background-color: #e42fbd;
+    background-color: #765094;
 
     border-radius: 50%;
 
@@ -279,7 +314,7 @@ linear-gradient(
 .evento h3 {
     font-size: 24px;
 
-    color: #e42fbd;
+    color: #765094;
 
     margin-bottom: 2px;
 }
@@ -290,7 +325,7 @@ linear-gradient(
 .evento h4 {
     font-size: 16px;
 
-    color: #e42fbd;
+    color: #765094;
 
     margin-bottom: 10px;
 }
@@ -307,12 +342,11 @@ linear-gradient(
     text-align: center;
 }
 
+
 /* GALERIA DE FOTOS */
 
 .galeria {
     width: 100%;
-
-    display: flex;
 
     margin: 0;
     padding: 0;
@@ -320,13 +354,26 @@ linear-gradient(
     overflow: hidden;
 }
 
-.galeria img {
-    width: 20%;
-    aspect-ratio: 1 / 1;
+.carrossel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrossel-track {
+    display: flex;
+    width: max-content;
+
+    animation: deslizar 25s linear infinite;
+}
+
+.carrossel-track img {
+    width: 260px;
+    height: 260px;
 
     object-fit: cover;
 
     display: block;
+    flex-shrink: 0;
 }
 
 .foto2 {
@@ -341,10 +388,28 @@ linear-gradient(
     object-position: top;
 }
 
+@keyframes deslizar {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
 /* PRINCIPAIS FEITOS */
 
 .feitos {
-    background-color: #ca9bac;
+    background: linear-gradient(
+        to bottom,
+        #cca5d4 0%,
+        #cca5d4 92%,
+        #dbc0e1 96%,
+        #eee0f1 98%,
+        #fff8fb 100%
+    );
 
     padding: 70px 80px;
 
@@ -384,7 +449,7 @@ linear-gradient(
 
     gap: 40px;
 
-    border: 3px solid #e42fbd;
+    border: 3px solid #765094;
     border-radius: 22px;
 
     padding: 8px;
@@ -411,7 +476,7 @@ linear-gradient(
 .feito-texto h3 {
     font-size: 28px;
 
-    color: #e42fbd;
+    color: #765094;
 
     margin-bottom: 15px;
 }
@@ -441,6 +506,7 @@ linear-gradient(
     border-radius: 16px;
 }
 
+
 /* FALECIMENTO */
 
 .falecimento {
@@ -454,7 +520,7 @@ linear-gradient(
 .falecimento h2 {
     font-size: 40px;
 
-    color: #e42fbd;
+    color: #765094;
 
     margin-bottom: 15px;
 }
@@ -467,7 +533,7 @@ linear-gradient(
     width: 70px;
     height: 3px;
 
-    background-color: #e42fbd;
+    background-color: #765094;
 
     margin: 12px auto 35px auto;
 
@@ -499,7 +565,7 @@ linear-gradient(
     font-style: italic;
     font-weight: 500;
 
-    color: #e42fbd;
+    color: #765094;
 }
 
 .fotos-falecimento {
